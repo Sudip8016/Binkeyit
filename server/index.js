@@ -18,10 +18,7 @@ import orderRouter from './route/order.route.js'
 const app = express();
 
 // Middleware configurations
-app.use(cors({
-    credentials: true,
-    origin: process.env.FRONTEND_URL, // Corrected typo from `originn` to `origin`
-}));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('combined')); // Specify the format explicitly
