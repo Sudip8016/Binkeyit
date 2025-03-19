@@ -20,7 +20,7 @@ const app = express();
 // Middleware configurations
 app.use(cors({
     credentials: true,
-    origin: process.env.FRONTEND_URL,
+    origin: process.env.FRONTEND_URL || 'https://binkeyit-shop.vercel.app' ,
 }));
 app.use(express.json());
 app.use(cookieParser());
