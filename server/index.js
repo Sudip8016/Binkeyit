@@ -18,13 +18,16 @@ import orderRouter from './route/order.route.js'
 const app = express();
 
 // Middleware configurations
-app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: process.env.FRONTEND_URL,
+}));
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('combined')); // Specify the format explicitly
-app.use(helmet({
-    crossOriginResourcePolicy: false, // Allow cross-origin resources
-}));
+// app.use(helmet({
+//     crossOriginResourcePolicy: false, // Allow cross-origin resources
+// }));
 
 // Set the port
 const PORT = process.env.PORT || 4000; // Corrected order
