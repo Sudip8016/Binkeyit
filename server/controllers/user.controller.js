@@ -1,5 +1,5 @@
 import sendEmail from "../config/sendEmail.js";
-import UserModel from "../models/user.model.js";
+import userModel from "../models/user.model.js";
 import bcryptjs from 'bcryptjs'
 import verifyEmailTemplate from "../utils/verifyEmailTemplate.js";
 import generatedAccessToken from "../utils/generatedAccessToken.js";

@@ -1,6 +1,6 @@
 import OrderModel from "../models/order.model.js";
 import UserModel from "../models/user.model.js";
-import CartProductModel from "../models/cartproduct.model.js";
+import CartProductModel from "../models/cartproduct.model.js"
 import mongoose from "mongoose";
 import Stripe from "../config/stripe.js";
 
